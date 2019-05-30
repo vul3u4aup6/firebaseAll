@@ -1,11 +1,11 @@
-language:node.js
+language:node_js
 node_js:
  - "8"
 
  before_install:
- - npm i -g firebase deploy
+ - npm i -g firebase-tools
  install:
- - cd functions && npm install
+ - cd function && npm install
  script:
  - firebase deploy --token "$FIREBASE_TOKEN"
  notification:
